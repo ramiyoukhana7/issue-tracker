@@ -9,3 +9,24 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Issue {
+  id          Int      @id @default(autoincrement())
+  // Overiting default VarChar title length
+  title       String   @db.VarChar(255)
+  // Overiting default description length
+  description String   @db.Text
+  // Setting the default value of status to open
+  status      Status   @default(OPEN)
+  // Tracking when an issue is created
+  createdAt   DateTime @default(now())
+  // Tracking when an issue is updated
+  updatedAt   DateTime @updatedAt
+}
+
+// Creating enum to represent Status values
+enum Status {
+  OPEN
+  IN_PROGRESS
+  CLOSED
+}

@@ -14,17 +14,17 @@ pnpm dev
 
 # Tech Stack
 
--Next.JS 13
--TypeScript
--MySQL
--Prisma
--ZOD
--DataGrip
--Tailwind
--Radix UI
--Axios
+- Next.JS 13
+- TypeScript
+- MySQL
+- Prisma
+- ZOD
+- DataGrip
+- Tailwind
+- Radix UI
+- Axios
 
 ## Packages
 
--React Hook Form
--Easy MDE
+- React Hook Form
+- Easy MDE

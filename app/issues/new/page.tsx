@@ -23,6 +23,7 @@ const NewIssuePage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<IssueForm>({
+    // Validating the form data with Zod schema, defined in createIssueSchema
     resolver: zodResolver(createIssueSchema),
   });
   const [error, setError] = useState("");

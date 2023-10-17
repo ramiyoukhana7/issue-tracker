@@ -28,3 +28,5 @@ pnpm dev
 
 - React Hook Form
 - Easy MDE
+- React Markdown
+- Tailwindcss Typography

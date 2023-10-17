@@ -12,6 +12,7 @@ import { createIssueSchema } from "@/app/validationSchemas";
 import { z } from "zod";
 import ErrorMessage from "@/app/components/ErrorMessage";
 import Spinner from "@/app/components/Spinner";
+import { Issue } from "@prisma/client";
 
 // Lazyloading SimpleMDE
 const SimpleMDE = dynamic(
@@ -22,7 +23,7 @@ const SimpleMDE = dynamic(
 
 type IssueFormData = z.infer<typeof createIssueSchema>;
 
-const IssueForm = () => {
+const IssueForm = ({ issue }: { issue?: Issue }) => {
   const router = useRouter();
 
   // Destructuring the object returned by useForm hook, extracting the register and control functions
@@ -61,7 +62,11 @@ const IssueForm = () => {
         <TextField.Root>
           {/* creates a text input field and connects it to the form state and validate it with 
         the register function*/}
-          <TextField.Input placeholder="Title" {...register("title")} />
+          <TextField.Input
+            defaultValue={issue?.title}
+            placeholder="Title"
+            {...register("title")}
+          />
         </TextField.Root>
         <ErrorMessage>{errors.title?.message}</ErrorMessage>
 
@@ -70,6 +75,7 @@ const IssueForm = () => {
           name="description"
           // Control function provides tools for managing the form state and validation
           control={control}
+          defaultValue={issue?.description}
           // The render function renders the SimpleMDE component
           render={({ field }) => (
             // Renders SimpleMDE and spreads field object props onto it.

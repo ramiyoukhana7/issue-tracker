@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Importing Zod to validate the API
 import prisma from "@/prisma/client";
-import { createIssueSchema } from "../../validationSchemas";
+import { issueSchema } from "../../validationSchemas";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const validation = createIssueSchema.safeParse(body);
+  const validation = issueSchema.safeParse(body);
   if (!validation.success)
     // If the issue is unsuccessful show the validation error and set the status to 400
     return NextResponse.json(validation.error.format(), { status: 400 });

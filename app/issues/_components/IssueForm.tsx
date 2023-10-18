@@ -38,7 +38,7 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
       setIsSubbmitting(true);
       if (issue) await axios.patch("/api/issues/" + issue.id, data);
       else await axios.post("/api/issues", data);
-      router.push("/issues");
+      router.push("/issues/list");
       // Refreshing the content in the issues route, so the user can see their new issue right away
       router.refresh();
     } catch (error) {

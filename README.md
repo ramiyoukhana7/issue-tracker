@@ -15,6 +15,7 @@ pnpm dev
 # Tech Stack
 
 - Next.JS 13
+- NextAuth
 - TypeScript
 - MySQL
 - Prisma

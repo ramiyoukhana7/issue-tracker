@@ -59,6 +59,8 @@ const NavBar = () => {
                     size="4"
                     radius="full"
                     className="cursor-pointer"
+                    // In case the user image is not being displayed
+                    referrerPolicy="no-referrer"
                   />
                 </DropdownMenu.Trigger>
                 <DropdownMenu.Content>

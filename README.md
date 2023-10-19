@@ -24,6 +24,7 @@ pnpm dev
 - Tailwind
 - Radix UI
 - Axios
+- TanStack (ReactQuery)
 
 ## Packages
 

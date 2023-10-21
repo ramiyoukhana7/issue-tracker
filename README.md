@@ -19,11 +19,13 @@ pnpm dev
 - TypeScript
 - MySQL
 - Prisma
+- DataGrip
 - ZOD
 - DataGrip
 - Tailwind
 - Radix UI
 - Axios
+- TanStack (ReactQuery)
 
 ## Packages
 
@@ -31,3 +33,4 @@ pnpm dev
 - Easy MDE
 - React Markdown
 - Tailwindcss Typography
+- React Hot Toast

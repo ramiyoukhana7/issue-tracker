@@ -19,6 +19,7 @@ pnpm dev
 - TypeScript
 - MySQL
 - Prisma
+- DataGrip
 - ZOD
 - DataGrip
 - Tailwind

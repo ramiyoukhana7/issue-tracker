@@ -34,11 +34,7 @@ export async function PATCH(
     data: {
       title: body.title,
       description: body.description,
-      assignedToUser: {
-        update: {
-          id: assignedToUserId,
-        },
-      },
+      assignedToUserId,
     },
   });
 

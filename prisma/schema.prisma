@@ -22,8 +22,8 @@ model Issue {
   createdAt      DateTime @default(now())
   // Tracking when an issue is updated
   updatedAt      DateTime @updatedAt
-  assignToUserId String?  @db.VarChar(255)
-  assignedToUser User?    @relation(fields: [assignToUserId], references: [id])
+  assignedToUserId String?  @db.VarChar(255)
+  assignedToUser User?    @relation(fields: [assignedToUserId], references: [id])
 }
 
 // Creating enum to represent Status values

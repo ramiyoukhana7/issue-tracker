@@ -33,3 +33,4 @@ pnpm dev
 - Easy MDE
 - React Markdown
 - Tailwindcss Typography
+- React Hot Toast

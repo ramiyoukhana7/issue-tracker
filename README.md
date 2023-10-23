@@ -34,3 +34,4 @@ pnpm dev
 - React Markdown
 - Tailwindcss Typography
 - React Hot Toast
+- Recharts

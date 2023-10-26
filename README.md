@@ -4,6 +4,7 @@
 
 # Tech Stack
 
+- Git
 - Next.JS 13
 - NextAuth
 - TypeScript

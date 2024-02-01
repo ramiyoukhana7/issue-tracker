@@ -12,7 +12,6 @@
 - Prisma
 - DataGrip
 - ZOD
-- DataGrip
 - Tailwind
 - Radix UI
 - Axios
